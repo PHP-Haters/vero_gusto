@@ -23,7 +23,20 @@ p{
 }
 
 header{
-    height: auto;
+    width: auto;
+    height: 700px;
+    padding: 0 50px;
+    background-image: url("../assets/images/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+nav {
     padding: 0 50px;
     display: flex;
     flex-direction: row;
@@ -38,12 +51,7 @@ header{
     top: 0;
 }
 
-.logo {
-    height: 100px;
-    width: auto;
-}
-
-nav {
+nav .links{
     height: fit-content;
     width: 250px;
     display: flex;
@@ -56,19 +64,9 @@ nav a{
     text-decoration: none;
 }
 
-.header-image{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-}
-
 footer{
     width: 100%;
     height: fit-content;
-    position: absolute;
-    bottom: 0;
-    background: rgb(12,4,4);
 }
 
 .footer_contato{
@@ -82,7 +80,7 @@ footer{
 .footer_visitar{
     margin-left: 100px;
     color: #fff;
-    display: bloc;
+    display: block;
     padding-bottom: 35px;
 }
 
