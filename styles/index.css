@@ -1,3 +1,43 @@
+.holder{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.holder .inner-holder{
+    width: 950px;
+    height: 400px;
+    padding: 50px 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.holder .inner-holder .left, .holder .inner-holder .right{
+    height: 100%;
+}
+
+.holder .inner-holder .left img{
+    width: 450px;
+    height: auto;
+}
+
+.holder .inner-holder .right{
+    height: 100%;
+    width: 450px;
+}
+
+.holder .inner-holder .right img{
+    width: 450px;
+}
+
+.holder p{
+    width: 950px;
+}
+
 .mapa-pizzaria{
     width: 100%;
     height: 50%;
