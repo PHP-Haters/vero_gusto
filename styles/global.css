@@ -31,8 +31,7 @@ p{
 
 header{
     width: auto;
-    height: 700px;
-    padding: 0 50px;
+    height: fit-content;
 }
 
 .logo {
@@ -72,6 +71,10 @@ nav a{
     border-bottom: 2.5px solid #409D31;
     padding-bottom: 2px;
     line-height: 1.5;
+}
+
+#header-image{
+    width: 100%;
 }
 
 footer{
