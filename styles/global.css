@@ -64,6 +64,12 @@ nav a{
     text-decoration: none;
 }
 
+.current-page{
+    border-bottom: 2.5px solid #409D31;
+    padding-bottom: 2px;
+    line-height: 1.5;
+}
+
 footer{
     width: 100%;
     height: fit-content;
