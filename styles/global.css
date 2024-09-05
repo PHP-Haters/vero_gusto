@@ -11,6 +11,13 @@ body{
     background-color: #0C0404;
 }
 
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
 h3{
     font-family: "Libre Baskerville", serif;
     font-weight: 700;
@@ -26,9 +33,6 @@ header{
     width: auto;
     height: 700px;
     padding: 0 50px;
-    background-image: url("../assets/images/header.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .logo {
