@@ -1,29 +1,27 @@
-
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     font-weight: bold;
     color: white;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+}
+
+.container {
+    display: contents;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     max-width: 100%;
     margin: 5rem;
-  }
-  
-  .container div {
+}
+
+.container div {
     display: flex;
     flex-direction: column;
-  }
-  
-  input[type="text"] {
+}
+
+select {
     background: none;
-    border: none;
-    border-bottom: 1px solid #ffffff;
+    border: 1px solid #ffffff;
     color: #ffffff;
     font-size: 1rem;
     padding: 10px;
@@ -31,42 +29,53 @@ h1 {
     width: 50%;
     box-sizing: border-box;
     margin-top: 10px;
-  }
-  
-  input[type="text"]::placeholder {
-    color: #ffffff;
-    opacity: 0.8;
-  }
-  
-  input[type="text"]:focus {
-    border-bottom: 1px solid #ffffff;
+    border-radius: 5px;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23fff" d="M2 0L0 2h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 10px;
+}
+
+select:focus {
+    border-color: #ffffff;
     outline: none;
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+select option {
+    background-color: #0C0404;
+    color: #ffffff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: "Montserrat", sans-serif;
 }
 
-body{
+body {
+    justify-content: center;
     background-color: #0C0404;
 }
 
-h3{
+h3 {
     font-family: "Libre Baskerville", serif;
     font-weight: 700;
     font-style: normal;
     padding-bottom: 15px;
 }
 
-p{
+p {
     font-family: "Montserrat", sans-serif;
 }
 
-header{
+header {
     width: auto;
     height: 700px;
     padding: 0 50px;
@@ -95,7 +104,7 @@ nav {
     top: 0;
 }
 
-nav .links{
+nav .links {
     height: fit-content;
     width: 250px;
     display: flex;
@@ -103,32 +112,31 @@ nav .links{
     justify-content: space-between;
 }
 
-nav a{
+nav a {
     color: #fff;
     text-decoration: none;
 }
 
-footer{
+footer {
     width: 100%;
     height: fit-content;
 }
 
-.footer_contato{
-    margin-left: 100px;
-    color: #fff;
-    display: block;
-    padding-bottom: 35px;
-    
-}
-
-.footer_visitar{
+.footer_contato {
     margin-left: 100px;
     color: #fff;
     display: block;
     padding-bottom: 35px;
 }
 
-.copyright{
+.footer_visitar {
+    margin-left: 100px;
+    color: #fff;
+    display: block;
+    padding-bottom: 35px;
+}
+
+.copyright {
     display: flex;
     flex-direction: column;
     align-items: center;
