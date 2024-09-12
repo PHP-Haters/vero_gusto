@@ -48,13 +48,11 @@
 }
 
 .mapa-pizzaria h2{
-    font-family: "Libre Baskerville", serif;
-    margin-left: 285px;
     padding-bottom: 35px;
 }
 
-.mapa-pizzaria img{
-    width: 63%;
+.mapa-pizzaria h2, .mapa-pizzaria img{
+    width: 50%;
     height: auto;
     align-self: center;
 }
