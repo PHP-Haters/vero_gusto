@@ -31,7 +31,11 @@ p{
 
 header{
     width: auto;
-    height: fit-content;
+    height: 800px;
+    padding: 0 50px;
+    background-image: url("../assets/images/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo {
@@ -86,7 +90,7 @@ footer{
     margin-left: 100px;
     display: block;
     padding-bottom: 35px;
-    
+
 }
 
 .footer_visitar{
