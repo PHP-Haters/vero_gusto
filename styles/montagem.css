@@ -1,6 +1,4 @@
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -9,7 +7,8 @@ h1 {
 }
 
 .container {
-    display: contents;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -17,9 +16,30 @@ h1 {
     margin: 5rem;
 }
 
-.container div {
-    display: flex;
-    flex-direction: column;
+.container-pizza {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    margin: 5rem;
+}
+
+.container-centralizado{
+    display: grid;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-item {
+    align-items: center;
+    min-width: 100%;
+}
+
+.titulo_montagem{
+    width: 100%;
 }
 
 select {
@@ -29,7 +49,7 @@ select {
     font-size: 1rem;
     padding: 10px;
     outline: none;
-    width: 50%;
+    width: 60%;
     box-sizing: border-box;
     margin-top: 10px;
     border-radius: 5px;
