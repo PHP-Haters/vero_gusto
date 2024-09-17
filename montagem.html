@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,12 +36,11 @@
             </select>
         </div>
         <div class="container-item">
-            <label class="titulo_montagem" for="sabores"></label>
-            <select id="sabores">
+            <label class="titulo_montagem" for="quantidade_sabores"></label>
+            <select id="quantidade_sabores">
                 <option selected disabled value="">Selecione um sabor</option>
                 <option value="1">1 Sabor</option>
                 <option value="2">2 Sabores</option>
-                <option value="3">3 Sabores</option>
                 <option value="4">4 Sabores</option>
             </select>
         </div>
@@ -69,30 +69,32 @@
     <div class="container-centralizado">
         <h1>Escolha os sabores</h1>
     </div>
-    
-    <div class="container-pizza">
-        aqui vai Imagem Pizza
+
+    <div id="container-pizza" class="container-pizza">
+        <div class='pizza-slices'>
+            <img src="assets/images/montagem/pizza_um_sabor.png" alt="">
+        </div>
     </div>
 
-    <div class="container-endereco">
-        <div class="container-item-endereco">
-          <input id="cepInput" name="cep" type="text" placeholder="Cep">
+    <div class="container">
+        <div class="container-item">
+            <input id="cepInput" name="cep" type="text" placeholder="Cep">
         </div>
-        <div class="container-item-endereco">
+        <div class="container-item">
             <input id="ruaInput" name="rua" type="text" placeholder="Rua">
-          </div>
-          <div class="container-item-endereco">
+        </div>
+        <div class="container-item">
             <input id="telefoneInput" name="telefone" type="text" inputmode="tel" placeholder="Número de Celular">
-          </div>
-          <div class="container-item-endereco">
+        </div>
+        <div class="container-item">
             <input id="bairroInput" name="bairro" type="text" placeholder="Bairro">
-          </div>
-          <div class="container-item-endereco">
+        </div>
+        <div class="container-item">
             <input id="complementoInput" name="complemento" type="text" placeholder="Complemento">
-          </div>
-          <div class="container-item-endereco">
+        </div>
+        <div class="container-item">
             <input id="nomeUsuarioInput" name="nomeUsuario" type="text" placeholder="Seu Nome">
-          </div>
+        </div>
     </div>
 
     <footer>
@@ -105,7 +107,7 @@
             <p>Venha nos visitar</p>
         </div>
         <div class="copyright">
-            <p>Copyright ©2024 Vero Gusto - Desenvolvido por  PHP Haters</p>
+            <p>Copyright ©2024 Vero Gusto - Desenvolvido por PHP Haters</p>
         </div>
     </footer>
 
