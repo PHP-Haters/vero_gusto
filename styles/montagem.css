@@ -18,12 +18,20 @@ h1 {
 
 .container-pizza {
     display: grid;
+    border-color: white;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    text-align: center;
     justify-content: center;
     gap: 20px;
     max-width: 100%;
     margin: 5rem;
+}
+
+.pizza-slices{
+    align-items: center;
+    min-width: 100%;
+    text-align: center;
 }
 
 .container-endereco {
@@ -46,6 +54,7 @@ h1 {
 .container-item {
     align-items: center;
     min-width: 100%;
+    text-align: center;
 }
 
 .titulo_montagem{
@@ -73,6 +82,31 @@ select {
 }
 
 select:focus {
+    border-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+input {
+    background: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px;
+    outline: none;
+    width: 60%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-radius: 5px;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 10px;
+}
+
+input:focus {
     border-color: #ffffff;
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
