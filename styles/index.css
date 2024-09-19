@@ -69,7 +69,7 @@
 }
 
 .testemonial-card{
-    width: 300px;
+    width: 30%;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -87,6 +87,11 @@
 
 .testemonial-card p{
     text-align: justify;
+}
+
+.testemonial-card .testemonial-perfil{
+    width: 30%;
+    height: auto;
 }
 
 .mapa-pizzaria{
