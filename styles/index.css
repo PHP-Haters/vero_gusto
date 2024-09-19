@@ -12,8 +12,8 @@
 }
 
 .holder .inner-holder{
-    height: 450px;
-    padding: 50px 0 10px 0;
+    height: fit-content;
+    padding: 50px 0 25px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,17 +24,26 @@
 }
 
 .holder .inner-holder .left img{
-    width: 510px;
+    width: 100%;
     height: auto;
 }
 
 .holder .inner-holder .right{
+    padding-left: 10px;
+}
+
+.holder .inner-holder .left{
+    padding-right: 10px;
+}
+
+.holder .inner-holder .right, .holder .inner-holder .left{
     height: 100%;
-    width: 510px;
+    width: 50%;
 }
 
 .holder .inner-holder .right img{
-    width: 450px;
+    width: 100%;
+    height: auto;
 }
 
 .testemonial-section{
