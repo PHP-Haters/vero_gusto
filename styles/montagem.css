@@ -9,15 +9,15 @@
 }
 
 .container-pizza {
-    display: grid;
+    width: 100%;
     border-color: white;
     grid-template-columns: repeat(2, 1fr);
+    display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
     gap: 20px;
     max-width: 100%;
-    margin: 5rem;
 }
 
 .pizza-slices{
