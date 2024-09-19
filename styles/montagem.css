@@ -5,7 +5,7 @@
     justify-content: center;
     gap: 20px;
     max-width: 100%;
-    margin: 5rem;
+    margin: 40px 0;
 }
 
 .container-pizza {
@@ -37,10 +37,15 @@
 }
 
 .container-centralizado{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     align-items: center;
     justify-content: center;
+}
+
+.container-centralizado img{
+    width: 130px;
 }
 
 .container-item {
