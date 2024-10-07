@@ -3,23 +3,27 @@ const pageLink = currentPage === "index.html" ? "#first-page" : "#second-page";
 document.querySelector(pageLink).classList.add("current-page");
 
 var inputQuantidadeSabores = document.getElementById("quantidade_sabores");
-var pizzaContainer = document.getElementById("container-pizza");
 
-function capturaQuantidadeSabores(){
-    return parseFloat(inputQuantidadeSabores.value);
+inputQuantidadeSabores.onchange = function() {
+    let quantidade = parseInt(inputQuantidadeSabores.options[inputQuantidadeSabores.selectedIndex].value);
+    
+    limpaQuantidadeSabores();
+
+    if(quantidade == 1){
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices'><img heigth=500 width=500 src='assets/images/montagem/pizza_um_sabor.png' alt=''></div>";
+    }
+    else if(quantidade == 2){
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices flipH'><img heigth=300 width=300 src='assets/images/montagem/pizza_um_sabor3.png' alt=''></div><div class='pizza-slices'><img heigth=300 width=300 src='assets/images/montagem/pizza_um_sabor3.png' alt=''></div>";
+    }
+    else{
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices'><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices flipH'><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices flipH flipV'><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices flipV flipH'><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div>";
+    }
 }
+
+var pizzaContainer = document.getElementById("container-pizza");
 
 function limpaQuantidadeSabores() {     
     while(pizzaContainer.firstChild) { 
         pizzaContainer.removeChild(pizzaContainer.firstChild); 
     } 
 } 
-
-inputQuantidadeSabores.addEventListener("change", () => {
-    let quantidade = capturaQuantidadeSabores();
-    limpaQuantidadeSabores();
-
-    for(var i = 0; i < quantidade; i++){
-        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices'></div>";
-    }
-});

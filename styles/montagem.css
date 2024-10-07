@@ -31,7 +31,42 @@ h1 {
 .pizza-slices{
     align-items: center;
     min-width: 100%;
+
+    background-size: cover; /* or 'contain' */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Can be a specific width too, like 300px */
+    aspect-ratio: 16 / 9; /* Set the ratio based on the image, e.g., width/height */
+    
+    height: 100%;
     text-align: center;
+}
+
+.flipH {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.flipV {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+
+.flipVV {
+    -moz-transform: scaleY(-360);
+    -o-transform: scaleY(-360);
+    -webkit-transform: scaleY(-360);
+    transform: scaleY(-360);
+    filter: FlipV;
+    -ms-filter: "FlipV";
 }
 
 .container-endereco {
