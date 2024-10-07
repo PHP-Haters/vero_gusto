@@ -40,11 +40,13 @@ p{
 
 header{
     width: auto;
-    height: 800px;
-    padding: 0 50px;
-    background-image: url("../assets/images/header.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: fit-content;
+    margin-bottom: 80px;
+    padding: 0;
+}
+
+#banner-image{
+    width: 100%;
 }
 
 .logo {

@@ -23,12 +23,13 @@
 
     <div class="container-centralizado">
         <h1>A pizza do seu jeitinho</h1>
+        <img src="assets/images/forno.png" alt="forno">
     </div>
     <div class="container">
         <div class="container-item">
             <label class="titulo_montagem" for="tamanho"></label>
             <select id="tamanho">
-                <option selected disabled value="">Selecione o tamanho da pizza</option>
+                <option selected disabled hidden value="" class="placeholder-option" >Selecione o tamanho da pizza</option>
                 <option value="pequena">Pequena</option>
                 <option value="media">Média</option>
                 <option value="grande">Grande</option>
@@ -38,7 +39,7 @@
         <div class="container-item">
             <label class="titulo_montagem" for="quantidade_sabores"></label>
             <select id="quantidade_sabores">
-                <option selected disabled value="">Selecione a quantidade de sabores</option>
+                <option selected disabled hidden value="" class="placeholder-option" >Quantidade de sabores</option>
                 <option value="1">1 Sabor</option>
                 <option value="2">2 Sabores</option>
                 <option value="4">4 Sabores</option>
@@ -47,7 +48,7 @@
         <div class="container-item">
             <label class="titulo_montagem" for="borda"></label>
             <select id="borda">
-                <option selected disabled value="">Selecione um tipo de borda</option>
+                <option selected disabled hidden value="" class="placeholder-option" >Selecione um tipo de borda</option>
                 <option value="semBorda">Sem borda</option>
                 <option value="recheada">Recheada</option>
                 <option value="grossa">Grossa</option>
@@ -57,7 +58,7 @@
         <div class="container-item">
             <label class="titulo_montagem" for="saborBorda"></label>
             <select id="saborBorda">
-                <option selected disabled value="">Selecione o sabor da borda</option>
+                <option selected disabled hidden value="" class="placeholder-option">Selecione o sabor da borda</option>
                 <option value="nenhum">Nenhum</option>
                 <option value="catupiry">Catupiry</option>
                 <option value="cheddar">Cheddar</option>
