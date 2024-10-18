@@ -212,3 +212,16 @@ footer {
     font-size: 14px;
     padding-bottom: 12px;
 }
+
+#formBtn{
+    width: 200px;
+    height: 50px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(50, 180, 30);
+    color: #FFFFFF;
+    cursor: pointer;
+}

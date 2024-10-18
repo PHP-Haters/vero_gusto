@@ -21,81 +21,82 @@
         </nav>
     </header>
 
-    <div class="container-centralizado">
-        <h1>A pizza do seu jeitinho</h1>
-    </div>
-    <div class="container">
-        <div class="container-item">
-            <label class="titulo_montagem" for="tamanho"></label>
-            <select id="tamanho">
-                <option selected disabled value="">Selecione o tamanho da pizza</option>
-                <option value="pequena">Pequena</option>
-                <option value="media">Média</option>
-                <option value="grande">Grande</option>
-                <option value="gigante">Gigante</option>
-            </select>
+    <form>
+        <div class="container-centralizado">
+            <h1>A pizza do seu jeitinho</h1>
         </div>
-        <div class="container-item">
-            <label class="titulo_montagem" for="quantidade_sabores"></label>
-            <select id="quantidade_sabores">
-                <option selected disabled value="">Selecione um sabor</option>
-                <option value="1">1 Sabor</option>
-                <option value="2">2 Sabores</option>
-                <option value="4">4 Sabores</option>
-            </select>
+        <div class="container">
+            <div class="container-item">
+                <label class="titulo_montagem" for="tamanho"></label>
+                <select id="tamanho">
+                    <option selected disabled value="">Selecione o tamanho da pizza</option>
+                    <option value="pequena">Pequena</option>
+                    <option value="media">Média</option>
+                    <option value="grande">Grande</option>
+                    <option value="gigante">Gigante</option>
+                </select>
+            </div>
+            <div class="container-item">
+                <label class="titulo_montagem" for="quantidade_sabores"></label>
+                <select id="quantidade_sabores">
+                    <option selected disabled value="">Selecione um sabor</option>
+                    <option value="1">1 Sabor</option>
+                    <option value="2">2 Sabores</option>
+                    <option value="4">4 Sabores</option>
+                </select>
+            </div>
+            <div class="container-item">
+                <label class="titulo_montagem" for="borda"></label>
+                <select id="borda">
+                    <option selected disabled value="">Selecione um tipo de borda</option>
+                    <option value="semBorda">Sem borda</option>
+                    <option value="recheada">Recheada</option>
+                    <option value="grossa">Grossa</option>
+                    <option value="fina">Fina</option>
+                </select>
+            </div>
+            <div class="container-item">
+                <label class="titulo_montagem" for="saborBorda"></label>
+                <select id="saborBorda">
+                    <option selected disabled value="">Selecione o sabor da borda</option>
+                    <option value="nenhum">Nenhum</option>
+                    <option value="catupiry">Catupiry</option>
+                    <option value="cheddar">Cheddar</option>
+                    <option value="calabresa">Calabresa</option>
+                </select>
+            </div>
         </div>
-        <div class="container-item">
-            <label class="titulo_montagem" for="borda"></label>
-            <select id="borda">
-                <option selected disabled value="">Selecione um tipo de borda</option>
-                <option value="semBorda">Sem borda</option>
-                <option value="recheada">Recheada</option>
-                <option value="grossa">Grossa</option>
-                <option value="fina">Fina</option>
-            </select>
+        <div class="container-centralizado">
+            <h1>Escolha os sabores</h1>
         </div>
-        <div class="container-item">
-            <label class="titulo_montagem" for="saborBorda"></label>
-            <select id="saborBorda">
-                <option selected disabled value="">Selecione o sabor da borda</option>
-                <option value="nenhum">Nenhum</option>
-                <option value="catupiry">Catupiry</option>
-                <option value="cheddar">Cheddar</option>
-                <option value="calabresa">Calabresa</option>
-            </select>
+        <div id="container-pizza" class="container-pizza">
+            <div class='pizza-slices'>
+                <img src="assets/images/montagem/pizza_um_sabor.png" alt="">
+            </div>
         </div>
-    </div>
+        <div class="container">
+            <div class="container-item">
+                <input id="cepInput" name="cep" type="text" placeholder="Cep">
+            </div>
+            <div class="container-item">
+                <input id="ruaInput" name="rua" type="text" placeholder="Rua">
+            </div>
+            <div class="container-item">
+                <input id="telefoneInput" name="telefone" type="text" inputmode="tel" placeholder="Número de Celular">
+            </div>
+            <div class="container-item">
+                <input id="bairroInput" name="bairro" type="text" placeholder="Bairro">
+            </div>
+            <div class="container-item">
+                <input id="complementoInput" name="complemento" type="text" placeholder="Complemento">
+            </div>
+            <div class="container-item">
+                <input id="nomeUsuarioInput" name="nomeUsuario" type="text" placeholder="Seu Nome">
+            </div>
+        </div>
 
-    <div class="container-centralizado">
-        <h1>Escolha os sabores</h1>
-    </div>
-
-    <div id="container-pizza" class="container-pizza">
-        <div class='pizza-slices'>
-            <img src="assets/images/montagem/pizza_um_sabor.png" alt="">
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="container-item">
-            <input id="cepInput" name="cep" type="text" placeholder="Cep">
-        </div>
-        <div class="container-item">
-            <input id="ruaInput" name="rua" type="text" placeholder="Rua">
-        </div>
-        <div class="container-item">
-            <input id="telefoneInput" name="telefone" type="text" inputmode="tel" placeholder="Número de Celular">
-        </div>
-        <div class="container-item">
-            <input id="bairroInput" name="bairro" type="text" placeholder="Bairro">
-        </div>
-        <div class="container-item">
-            <input id="complementoInput" name="complemento" type="text" placeholder="Complemento">
-        </div>
-        <div class="container-item">
-            <input id="nomeUsuarioInput" name="nomeUsuario" type="text" placeholder="Seu Nome">
-        </div>
-    </div>
+        <button id="formBtn">Confirmar pedido</button>
+    </form>
 
     <footer>
         <div class="footer_contato">
@@ -112,4 +113,5 @@
     </footer>
 
     <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/montagem.js"></script>
 </body>
