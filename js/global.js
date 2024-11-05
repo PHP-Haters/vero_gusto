@@ -16,40 +16,18 @@ function limpaQuantidadeSabores() {
     } 
 } 
 
-function umSabor(quantidade) {
-    for(var i = 0; i < quantidade; i++){
-        pedacosDePizza[i].innerHTML =  pedacosDePizza[i].innerHTML + "<img src='assets/images/montagem/pizza_um_sabor.png' alt=''>";
-    }
-}
-function doisSabores(quantidade) {
-    for(var i = 0; i < quantidade; i++){
-        console.log(pedacosDePizza[i]);
-        pedacosDePizza[i].innerHTML = "<img src='assets/images/montagem/pizza_um_sabor3.png' alt=''>";
-    }
-}
-function quatroSabores(quantidade) {
-    for(var i = 0; i < quantidade; i++){
-        console.log(pedacosDePizza[i]);
-        pedacosDePizza[i].innerHTML = "<img src='assets/images/montagem/pizza_um_sabor4.png' alt=''>";
-    }
-}
-
-
-inputQuantidadeSabores.addEventListener("change", () => {
+inputQuantidadeSabores.onchange = function() {
+    let quantidade = parseInt(inputQuantidadeSabores.options[inputQuantidadeSabores.selectedIndex].value);
     
-    let quantidade = capturaQuantidadeSabores();
     limpaQuantidadeSabores();
-    for(var i = 0; i < quantidade; i++){
-        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div id='"+i+"Pedaco' class='pizza-slices'></div>";
-        pedacosDePizza[i] = document.getElementById(i+"Pedaco");
+
+    if(quantidade == 1){
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices'><img heigth=500 width=500 src='assets/images/montagem/pizza_um_sabor.png' alt=''></div>";
     }
-    if(quantidade == 2) {
-        doisSabores(quantidade);
-    } 
-    else if(quantidade == 4) {
-        quatroSabores(quantidade);
+    else if(quantidade == 2){
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices flipH'><img heigth=300 width=300 src='assets/images/montagem/pizza_um_sabor3.png' alt=''></div><div class='pizza-slices'><img heigth=300 width=300 src='assets/images/montagem/pizza_um_sabor3.png' alt=''></div>";
     }
-    else {
-        umSabor(quantidade);
+    else{
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices '><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices flipH'><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices flipH flipV'><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices'><img heigth=150 width=150 src='assets/images/montagem/pizza_imagem_4_invertida.png' alt=''></div>";
     }
-});
+}
