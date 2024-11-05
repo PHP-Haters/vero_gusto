@@ -134,3 +134,18 @@ select option {
     background-color: #0C0404;
     color: #ffffff;
 }
+
+.container-enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submitButton {
+    background-color: #409D31;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
