@@ -1,11 +1,13 @@
 .title {
-    font-size: 3em;
+    font-size: 4.5em;
     font-weight: bold;
+    margin-top: 50px;
+    line-height: 0.5;
 }
 
 .subtitle {
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .holder{
