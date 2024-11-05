@@ -1,7 +1,12 @@
+.header-content {
+    margin-top: 65px;
+    padding: 40px;
+}
+
 .title {
     font-size: 4.5em;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 40px;
     line-height: 0.5;
 }
 
