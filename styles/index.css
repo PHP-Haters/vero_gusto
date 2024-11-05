@@ -8,7 +8,7 @@
 }
 
 .holder .inner-holder, .holder p{
-    width: 60%;
+    width: 69%;
 }
 
 .holder .inner-holder{
@@ -30,7 +30,7 @@
 
 .holder .inner-holder .right{
     height: 100%;
-    width: 510px;
+    width: 500px;
 }
 
 .holder .inner-holder .right img{
@@ -50,7 +50,7 @@
 }
 
 .testemonial-section h2, .testemonial-section .cards-holder{
-    width: 60%;
+    width: 67%;
 }
 
 .testemonial-section .cards-holder{
@@ -60,7 +60,7 @@
 }
 
 .testemonial-card{
-    width: 300px;
+    width: 250px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -86,15 +86,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 75px 0;
+    padding: 60px 0;
 }
 
 .mapa-pizzaria h2{
-    padding-bottom: 35px;
+    padding-bottom: 45px;
 }
 
 .mapa-pizzaria h2, .mapa-pizzaria img{
-    width: 60%;
+    width: 68%;
     height: auto;
     align-self: center;
 }
