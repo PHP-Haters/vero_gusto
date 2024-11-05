@@ -1,3 +1,13 @@
+.title {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
 .holder{
     width: 100%;
     height: fit-content;
