@@ -44,24 +44,42 @@ const bairro = document.querySelector("#bairroInput");
 const complemento = document.querySelector("#complementoInput");
 const usuario = document.querySelector("#nomeUsuarioInput");
 
-const formBtn = document.querySelector("#formBtn");
+const submitButton = document.querySelector("#submitButton");;
 
-formBtn.addEventListener("click", validarDados);
+submitButton.addEventListener("click", validarDados);
 
 function validarDados(event){
     event.preventDefault();
     
-    if (tamanhoPizza.value ||
-        quantidadeSabores.value ||
-        bordaPizza.value ||
-        saborBorda.value ||
-        cep.value ||
-        rua.value ||
-        telefone.value ||
-        bairro.value ||
-        complemento.value ||
+    if (tamanhoPizza.value &&
+        quantidadeSabores.value &&
+        bordaPizza.value &&
+        saborBorda.value &&
+        cep.value &&
+        rua.value &&
+        telefone.value &&
+        bairro.value &&
+        complemento.value &&
         usuario.value) {
+
+        var dadosForm = {
+            tamanhoPizza: tamanhoPizza.value,
+            quantidadeSabores: quantidadeSabores.value,
+            bordaPizza: bordaPizza.value,
+            saborBorda: saborBorda.value,
+            cep: cep.value,
+            rua: rua.value,
+            telefone: telefone.value,
+            bairro: bairro.value,
+            complemento: complemento.value,
+            usuario: usuario.value,
+        }
+
+        localStorage.setItem("dados_formulario", JSON.stringify(dadosForm));
+
         mostrarPopUp();
+        window.location.href = 'index.html';
+
     } else {
         window.alert("Ainda há campos vazios no formulário");
     }
