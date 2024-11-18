@@ -71,7 +71,7 @@
     </div>
 
     <div id="container-pizza" class="container-pizza">
-        <div class='pizza-slices'>
+        <div class='pizza-slices open-modal-btn'>
             <img src="assets/images/montagem/pizza_um_sabor.png" alt="">
         </div>
     </div>
@@ -99,6 +99,24 @@
 
     <div class="container-enviar">
         <button id="submitButton" name="enviarPedid0" type="submit">Confirmar pedido</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Selecione o Sabor</h2>
+
+            <div class="container-item">
+                <label class="titulo_montagem" for="sabor"></label>
+                <select id="sabor">
+                    <option selected disabled value="">Sabores</option>
+                    <option value="Calabresa">Calabresa</option>
+                    <option value="4 Queijos">4 Queijos</option>
+                    <option value="Moda da casa">Moda da casa</option>
+                    <option value="Marguerita">Marguerita</option>
+                </select>
+            </div>
+        </div>
     </div>
 
     <footer>
