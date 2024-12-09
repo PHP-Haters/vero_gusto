@@ -1,36 +1,36 @@
 const currentPage = window.location.href.split("/").pop(); // Breaks the URL into pieces and get the last element (current page) 
-const pageLink = currentPage === "index.html" ? "#first-page" : "#second-page"; 
+const pageLink = currentPage === "index.html" ? "#first-page" : "#second-page";
 document.querySelector(pageLink).classList.add("current-page");
 const modal = document.getElementById('modal');
 const closeModalBtn = document.getElementById('closeModalBtn');
-
+let select = document.getElementById('sabor');
 var inputQuantidadeSabores = document.getElementById("quantidade_sabores");
+let quantidade = parseInt(inputQuantidadeSabores.options[inputQuantidadeSabores.selectedIndex].value);
+
 var pizzaContainer = document.getElementById("container-pizza");
 
 var pedacosDePizza = [];
-function capturaQuantidadeSabores(){
+function capturaQuantidadeSabores() {
     return parseFloat(inputQuantidadeSabores.value);
 }
 
-function limpaQuantidadeSabores() {     
-    while(pizzaContainer.firstChild) { 
-        pizzaContainer.removeChild(pizzaContainer.firstChild); 
-    } 
-} 
+function limpaQuantidadeSabores() {
+    while (pizzaContainer.firstChild) {
+        pizzaContainer.removeChild(pizzaContainer.firstChild);
+    }
+}
 
-inputQuantidadeSabores.onchange = function() {
-    let quantidade = parseInt(inputQuantidadeSabores.options[inputQuantidadeSabores.selectedIndex].value);
-    
+inputQuantidadeSabores.onchange = function () {
     limpaQuantidadeSabores();
 
-    if(quantidade == 1){
-        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices open-modal-btn'><img heigth=500 width=500 src='assets/images/montagem/pizza_um_sabor.png' alt=''></div>";
+    if (quantidade == 1) {
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices open-modal-btn'><img heigth=500 width=500 src='assets/images/montagem/pizza_um_sabor.png' id='image1' alt=''></div>";
     }
-    else if(quantidade == 2){
-        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices open-modal-btn flipH'><img heigth=300 width=300 src='assets/images/montagem/pizza_um_sabor3.png' alt=''></div><div class='pizza-slices open-modal-btn'><img heigth=300 width=300 src='assets/images/montagem/pizza_um_sabor3.png' alt=''></div>";
+    else if (quantidade == 2) {
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices open-modal-btn flipH'><img heigth=300 img='image1' width=300 src='assets/images/montagem/pizza_um_sabor3.png' alt=''></div><div class='pizza-slices open-modal-btn'><img id='image2' heigth=300 width=300 src='assets/images/montagem/pizza_um_sabor3.png' alt=''></div>";
     }
-    else{
-        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices open-modal-btn '><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices open-modal-btn flipH'><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices open-modal-btn flipH flipV'><img heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices open-modal-btn'><img heigth=150 width=150 src='assets/images/montagem/pizza_imagem_4_invertida.png' alt=''></div>";
+    else {
+        pizzaContainer.innerHTML = pizzaContainer.innerHTML + "<div class='pizza-slices open-modal-btn '><img id='image1' heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices open-modal-btn flipH'><img id='image2' heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices open-modal-btn flipH flipV'><img id='image3' heigth=150 width=150 src='assets/images/montagem/pizza_um_sabor4.png' alt=''></div><div class='pizza-slices open-modal-btn'><img id='image4' heigth=150 width=150 src='assets/images/montagem/pizza_imagem_4_invertida.png' alt=''></div>";
     }
 
     var newBotao = document.querySelectorAll('.open-modal-btn'); // Seleciona todos os botões com a classe
@@ -43,14 +43,14 @@ inputQuantidadeSabores.onchange = function() {
     });
 
     closeModalBtn.addEventListener('click', () => {
-    modal.classList.remove('show'); // Oculta o modal
+        modal.classList.remove('show'); // Oculta o modal
     });
 
     // Fecha o modal ao clicar fora do conteúdo
     window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.classList.remove('show');
-    }
+        if (event.target === modal) {
+            modal.classList.remove('show');
+        }
     });
 }
 
@@ -58,20 +58,75 @@ const openModalBtns = document.querySelectorAll('.open-modal-btn'); // Seleciona
 
 // Adiciona o evento de clique para cada botão
 openModalBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    modal.classList.add('show'); // Exibe o modal
-  });
+    btn.addEventListener('click', (event) => {
+        modal.classList.add('show'); // Exibe o modal
+        var evento = event;
+        select.addEventListener('change', function () {
+            // btn.style.backgroundColor = ;
+            switch (select.value) {
+                case 'Calabresa':
+                    if (quantidade == 1 || isNaN(quantidade)) {
+                        const img = evento.currentTarget.querySelector('img');
+                        if (img) {
+                            console.log("Imagem clicada:", img.src); // Exibir o src da imagem no console
+                        }
+                    }
+                    else if (quantidade == 2) {
+
+                    }
+                    else {
+
+                    }
+                    break;
+                case '4 Queijos':
+                    if (quantidade == 1 || isNaN(quantidade)) {
+
+                    }
+                    else if (quantidade == 2) {
+
+                    }
+                    else {
+
+                    }
+                    break;
+                case 'Moda da casa':
+                    if (quantidade == 1 || isNaN(quantidade)) {
+
+                    }
+                    else if (quantidade == 2) {
+
+                    }
+                    else {
+
+                    }
+                    break;
+                case 'Marguerita':
+                    if (quantidade == 1 || isNaN(quantidade)) {
+
+                    }
+                    else if (quantidade == 2) {
+
+                    }
+                    else {
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
 });
 
 closeModalBtn.addEventListener('click', () => {
-  modal.classList.remove('show'); // Oculta o modal
+    modal.classList.remove('show'); // Oculta o modal
 });
 
 // Fecha o modal ao clicar fora do conteúdo
 window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.classList.remove('show');
-  }
+    if (event.target === modal) {
+        modal.classList.remove('show');
+    }
 });
 
 
@@ -90,9 +145,9 @@ const submitButton = document.querySelector("#submitButton");;
 
 submitButton.addEventListener("click", validarDados);
 
-function validarDados(event){
+function validarDados(event) {
     event.preventDefault();
-    
+
     if (tamanhoPizza.value &&
         quantidadeSabores.value &&
         bordaPizza.value &&
